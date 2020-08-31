@@ -1,0 +1,17 @@
+---
+admin:
+- admin.lvh.me
+- admin.mywebsite.com
+
+customers:
+- client.lvh.me
+- customers.lvh.me
+- customers-staging.mywebsite.com
+- customers.mywebsite.com
+- client.mywebsite.com
+- customers.ngrok.io
+
+calls:
+- calls.lvh.me
+- calls.ngrok.io
+- calls.mywebsite.com

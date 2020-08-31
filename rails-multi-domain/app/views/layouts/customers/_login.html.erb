@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>My Website Customers Center: Login</title>
+
+    <!-- BEGIN META -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="your,keywords">
+    <meta name="description" content="My Website Customers Center">
+
+    <link href='//fonts.googleapis.com/css?family=Roboto:300italic,400italic,300,400,500,700,900' rel='stylesheet' type='text/css'/>
+    <%= render "layouts/#{@theme}/favicon" %>
+
+    <%= stylesheet_link_tag "#{@theme}/application", media: 'all', 'data-turbolinks-track' => true %>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <%= javascript_include_tag 'html5shiv' %>
+      <%= javascript_include_tag 'respond.min' %>
+    <![endif]-->
+
+    <%= csrf_meta_tags %>
+  </head>
+
+	<body class="menubar-hoverable header-fixed ">
+
+		<!-- BEGIN LOGIN SECTION -->
+		<section class="section-account">
+      <div class="img-backdrop" style="background-image: url('<%= image_url('login_background.jpg') %>')">
+        <div class="backdrop-header-logo" style="vertical-align: middle; display: block-inline; margin: 0 auto">
+          <%= image_tag "circle-logo-326.png", style:"vertical-align: middle; display: block-inline; margin: auto; width: 200px; height: 200px; min-width:0; min-height:0; margin-top: 50px" %>
+        </div>
+      </div>
+			<div class="spacer"></div>
+			<div class="card contain-<%= card_size %> style-transparent">
+				<div class="card-body">
+          <%= yield %>
+				</div>
+			</div>
+		</section>
+		<!-- END LOGIN SECTION -->
+
+    <%= javascript_include_tag "#{@theme}/application", 'data-turbolinks-track' => true %>
+
+	</body>
+</html>

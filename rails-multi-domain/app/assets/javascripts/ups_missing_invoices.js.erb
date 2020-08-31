@@ -1,0 +1,13 @@
+jQuery(document).ready(function() {
+    $(".dataTable").dataTable();
+
+    $("#ups_missing_invoice_date_picker").datepaginator(
+      {
+        endDate: '<%= Date.today.strftime('%F') %>',
+        selectedDate: '<%= Chronic.parse('last Saturday').strftime('%F')%>',
+        highlightToday: false,
+        offDays: 'Sun',
+        showOffDays: true
+      }
+    );
+});

@@ -1,0 +1,35 @@
+
+<div class="row">
+  <div class="col-sm-12">
+    <h2>Change your password</h2>
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name),
+      html: { class: 'form floating-label', method: :put }) do |f| %>
+      <%= devise_error_messages! %>
+      <%= f.hidden_field :reset_password_token %>
+
+      <div class="form-group">
+        <%= f.password_field :password, class:"form-control", autocomplete: "off" %>
+        <%= f.label :password, "New password" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.password_field :password_confirmation, class:"form-control", autocomplete: "off" %>
+        <%= f.label :password_confirmation, "Confirm new password" %>
+      </div>
+
+      <br/>
+
+      <div class="row">
+        <div class="col-xs-12 text-right">
+          <%= link_to(
+            "<i class='md md-reply'></i> Back to login</button>".html_safe,
+            new_user_session_path,
+            class: 'btn btn-info btn-raised ink-reaction') %>
+
+          <button class="btn btn-primary btn-raised" type="submit">
+            Change my password <i class='md md-lock'></i></button>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

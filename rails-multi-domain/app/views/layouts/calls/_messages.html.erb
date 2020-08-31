@@ -1,0 +1,9 @@
+<!-- Flash Messages -->
+<% flash.each do |type, message| %>
+  <% if ['error','alert'].include?(type) %>
+	  <div class="callout <%= bootstrap_class_for(type) %> fade in flashmsg">
+	    <button class="close" data-dismiss="alert">×</button>
+	    <%= message %>
+	  </div>
+  <% end %>
+<% end %>

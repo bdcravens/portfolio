@@ -1,0 +1,55 @@
+<header id="header">
+  <div class="headerbar">
+    <div class="headerbar-left">
+      <ul class="header-nav header-nav-options">
+        <li class="header-nav-brand">
+          <div class="brand-holder">
+            <%= link_to(image_tag('logo-transparent-bg.png'), root_path) %>
+          </div>
+        </li>
+        <li>
+          <a class="btn btn-icon-toggle menubar-toggle" data-toggle="menubar" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+        </li>
+      </ul>
+    </div>
+    <div class="headerbar-right">
+      <ul class="header-nav header-nav-options">
+        <li class="hidden-xs hidden-sm" style="padding-right: 50px;">
+          <%= link_to("<i class='fa fa-smile-o fa-lg'></i> &nbsp; Share and get $100".html_safe, '#', id: 'open_squatch_nav', class: 'btn btn-warning') %>
+        </li>
+        <li>
+          <form action="<%= search_url %>" class="navbar-search expanded" role="search">
+            <div class="form-group">
+              <input class="form-control" name="q" placeholder="Search by Invoice #" type="text">
+            </div>
+            <button class="btn btn-icon-toggle ink-reaction" type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </li>
+      </ul>
+      <ul class="header-nav header-nav-profile">
+        <li class="dropdown">
+          <a class="dropdown-toggle ink-reaction" data-toggle="dropdown" href="javascript:void(0);">
+            <%= gravatar_tag(current_user, size: 140, default: 'mm', secure: Proc.new { request.ssl? }) %>
+            <span class="profile-info">
+              <%= "#{current_user.first_name} #{current_user.last_name}" %>
+              <small><%= current_user.company_name %></small>
+            </span>
+          </a>
+          <ul class="dropdown-menu animation-dock">
+            <a class="dropdown-toggle ink-reaction" data-toggle="dropdown" href="javascript:void(0);"></a>
+            <li><%= link_to '<i class="fa fa-building fa-lg pull-right"></i> My Company'.html_safe, customer_company_path(current_user.customer) %></li>
+            <li><%= link_to '<i class="fa fa-user fa-lg pull-right"></i> My Profile'.html_safe, edit_user_registration_path %></li>
+            <li><%= link_to '<i class="fa fa-truck fa-lg fa-flip-horizontal pull-right"></i> My Accounts'.html_safe, accounts_path %></li>
+            <li><%= link_to '<i class="fa fa-money fa-lg pull-right"></i> My Payment Settings'.html_safe, payment_profiles_path %></li>
+            <li class="divider"></li>
+            <li><%= link_to '<i class="fa fa-dollar fa-lg pull-right"></i> Billing'.html_safe, billing_index_path %></li>
+            <li class="divider"></li>
+            <% unless session[:external_app_user] %>
+              <li><%= link_to('<i class="fa fa-fw fa-power-off text-danger"></i> Logout'.html_safe, destroy_user_session_path, method: :delete) %></li>
+            <% end %>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>

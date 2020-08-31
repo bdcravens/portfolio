@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>My Website Call Center | Login</title>
+    <%= stylesheet_link_tag    'login', media: 'all'  %>
+      <link rel="shortcut icon" sizes="16x16 32x32 48x48 64x64 128x128" type="image/vnd.microsoft.icon" href="<%= image_url('favicon.ico')%>" />
+      <link rel="apple-touch-icon-precomposed" href="<%= image_url('apple-touch-icon-precomposed.png')%>">
+      <meta property="og:image" content="<%= image_url('facebook.png')%>"/>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <div class="colorful-page-wrapper">
+    	<%= render "layouts/#{@theme}/messages" %>
+    	<%= yield %>
+    </div>
+    <%= javascript_include_tag 'login' %>
+  </body>
+
+</html>

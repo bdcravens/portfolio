@@ -1,0 +1,42 @@
+<style>
+.orb-form .col-8 {
+  width: 100% !important;
+}
+</style>
+
+
+<div class="colorful-page-wrapper">
+  <div class="center-block">
+    <div class="login-block">
+      <img src="/assets/loading-small.gif" id="loading-small" style="display:none"/>
+      <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => {:method => :post ,:class => 'orb-form' , :id => 'password-form' , :remote => true }) do |f| %>
+        <header>
+          <div class="image-block"><img src="/assets/login-lock.png" alt="User" /></div>
+          Forgot your password?</header>
+        <fieldset>
+          <section>
+            <div class="row">
+              <div class="col col-8">
+                <label class="input"> <i class="icon-append fa fa-user"></i>
+                  <%= f.email_field :email, :autofocus => true, :placeholder => "enter your email" %>
+                </label>
+                 <div class="note" id="retloginnote">
+                  <%= link_to "Back to login", new_user_session_path %>
+                 </div>
+                <div class="note" id="password-success">
+                </div>
+                <div class="note" id="no-email">
+                </div>
+              </div>
+            </div>
+          </section>
+        </fieldset>
+        <footer>
+          <%= f.submit "Reset my password" ,:class => 'btn btn-default' , :id => "psub"%>
+          <%= link_to "Return to login", new_user_session_path ,:class => 'btn btn-default hide' , :id => "retlogin" %>
+        </footer>
+      <% end %>
+    </div>
+    <div class="copyrights"><%= copyright %></div>
+  </div>
+</div>

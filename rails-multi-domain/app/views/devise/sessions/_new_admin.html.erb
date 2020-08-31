@@ -1,0 +1,52 @@
+
+<div class="center-block">
+  <div class="login-block">
+    <%= form_for(resource, as:resource_name, url:session_path(resource_name), html:{class: 'orb-form' , id:'logn-form'}) do |f| %>    <!-- <form action="index.html" id="login-form" class="orb-form"> -->
+      <header>
+        <div class="image-block"><%= image_tag 'circle-logo-326.png' %></div>
+        Login to <strong>My Website</strong>
+      </header>
+      <fieldset>
+        <section>
+          <div class="row">
+            <label class="label col col-4">Login</label>
+            <div class="col col-8">
+              <label class="input"> <i class="icon-append fa fa-user"></i>
+                <%= f.text_field :login, autofocus: true %>
+              </label>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="row">
+            <label class="label col col-4">Password</label>
+            <div class="col col-8">
+              <label class="input"> <i class="icon-append fa fa-lock"></i>
+                <%= f.password_field :password %>
+              </label>
+              <div class="note">
+              <%= link_to "Forgot your password?", new_password_path(resource_name) %>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="row">
+            <div class="col col-4"></div>
+            <div class="col col-8">
+              <% if devise_mapping.rememberable? -%>
+              <label class="checkbox">
+                <%= f.check_box :remember_me %>
+                <i></i>Keep me logged in</label>
+              <% end -%>
+            </div>
+          </div>
+        </section>
+      </fieldset>
+      <footer>
+        <%= f.submit "Log in" , class:'btn btn-default' %>
+      </footer>
+    <% end %>
+  </div>
+  <div class="copyrights"><%= copyright %></div>
+</div>

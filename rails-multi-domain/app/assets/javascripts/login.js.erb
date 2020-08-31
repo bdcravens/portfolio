@@ -1,0 +1,19 @@
+/* page level plugins and scripts - Metronic theme */
+//= require jquery
+//= require jquery_ujs
+
+/* CORE PLUGINS - Metronic theme */
+//= require jquery-migrate-1.2.1.min
+//= require jquery-ui-1.10.3.custom.min
+//= require bootstrap.min
+//= require bootstrap-hover-dropdown.min
+//= require jquery.slimscroll.min
+//= require jquery.blockui.min
+//= require jquery.cokie.min
+//= require jquery.uniform.min
+//= require bootstrap-switch.min
+//= require jquery.backstretch.min
+
+jQuery(document).ready(function() {
+  $.backstretch("<%= image_url('rr_login_background.jpg')%>", {fade: 500});
+});

@@ -1,0 +1,65 @@
+<html lang="en">
+	<head>
+		<title>Refund Retriever Customers Center</title>
+
+		<!-- BEGIN META -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="My Website Customers Center">
+
+		<link href='//fonts.googleapis.com/css?family=Roboto:300italic,400italic,300,400,500,700,900' rel='stylesheet' type='text/css'/>
+
+		<%= render "layouts/#{@theme}/favicon" %>
+
+		<%= include_gon %>
+
+		<%= stylesheet_link_tag "#{@theme}/application", media: 'all', 'data-turbolinks-track' => true %>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<%= javascript_include_tag 'html5shiv' %>
+			<%= javascript_include_tag 'respond.min' %>
+		<![endif]-->
+
+		<%= csrf_meta_tags %>
+
+	</head>
+
+	<body class="menubar-hoverable header-fixed">
+
+		<%= render "layouts/#{@theme}/header" %>
+
+		<div id="base">
+
+			<%# render "layouts/#{@theme}/offcanvas_left" %>
+
+			<div id="content">
+
+				<section>
+
+					<%= render "layouts/#{@theme}/breadcrumbs" %>
+
+					<%= render "layouts/#{@theme}/notices" %>
+
+					<div class="section-body"><%= yield %></div>
+
+				</section>
+
+			</div>
+
+			<%= render "layouts/#{@theme}/menubar" %>
+
+			<%# render "layouts/#{@theme}/offcanvas_right" %>
+
+		</div>
+
+		<%= javascript_include_tag "#{@theme}/application", 'data-turbolinks-track' => true %>
+    
+		<%= yield :page_javascript %>
+
+		<%= render "layouts/#{@theme}/google_analytics" %>
+
+	</body>
+
+</html>

@@ -1,0 +1,4 @@
+$("#loading-small").css("display","none")
+$("#no-email").html("<%= @res.errors.full_messages.first%> , Try with another email")
+$("#user_email").val("")
+$("#user_email").focus()

@@ -1,0 +1,30 @@
+<div id="page_dashboard_index">
+
+    <div class="row pull-right">
+      <div class="col-md-12">
+        <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+          <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+          <span></span> <b class="caret"></b>
+        </div>
+      </div>
+    </div>
+
+    <%= form_tag customer_home_dateupdate_path, id:'pick_dates' do %>
+      <%= hidden_field_tag(:start_date, Date.today) %>
+      <%= hidden_field_tag(:end_date, Date.today) %>
+    <% end %>
+    <div class="clearfix"></div><br>
+  <%= render 'alerts' %>
+
+  <div class="row">
+    <%= render "#{@theme}/dashboard/cards/invoices" %>
+    <%= render "#{@theme}/dashboard/cards/partners" %>
+    <%= render "#{@theme}/dashboard/cards/dispute_activity" %>
+  </div>
+  
+  <div class="row">
+    <%= render "#{@theme}/dashboard/cards/accounts" %>
+    <%= render "#{@theme}/dashboard/cards/reports" %>
+  </div>
+
+</div>

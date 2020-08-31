@@ -1,0 +1,52 @@
+<%= render "layouts/#{@theme}/html_head" %>
+
+
+<!-- BEGIN BODY -->
+<!-- DOC: Apply "page-header-menu-fixed" class to set the mega menu fixed  -->
+<!-- DOC: Apply "page-header-top-fixed" class to set the top menu fixed  -->
+<body class="page-header-menu-fixed">
+<%= render "layouts/#{@theme}/header" %>
+<!-- BEGIN PAGE CONTAINER -->
+<div class="page-container">
+	<!-- BEGIN PAGE HEAD -->
+	<div class="page-head">
+		<div class="container-fluid">
+			<!-- BEGIN PAGE TITLE -->
+			<div class="page-title">
+				<h1><%= page_title %>
+          <small><%= page_subtitle %></small>
+				</h1>
+			</div>
+			<!-- END PAGE TITLE -->
+			<%# render "layouts/#{@theme}/page_toolbar" %>
+			</div>
+		</div>
+	</div>
+	<!-- END PAGE HEAD -->
+	<!-- BEGIN PAGE CONTENT -->
+	<div class="page-content">
+		<div class="container-fluid">
+			<%= render "layouts/#{@theme}/page_breadcrumbs" %>
+			<%= render "layouts/#{@theme}/messages" %>
+			<!-- BEGIN PAGE CONTENT INNER -->
+			<%= yield %>
+			<!-- END PAGE CONTENT INNER -->
+		</div>
+	</div>
+	<!-- END PAGE CONTENT -->
+</div>
+<!-- END PAGE CONTAINER -->
+<%= render "layouts/#{@theme}/pre_footer" %>
+<%= render "layouts/#{@theme}/page_footer" %>
+
+<!--[if lt IE 9]>
+<%= javascript_include_tag 'lt_ie9' %>
+<![endif]-->
+<%= javascript_include_tag 'application' %>
+<%= javascript_include_tag 'pages' %>
+<%= yield :javascript %>
+
+<!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>

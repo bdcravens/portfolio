@@ -1,0 +1,83 @@
+<% if notice.present? && show_flash?(:notice, notice) %>
+  <div class="alert alert-callout alert-info  alert-dismissable" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <%= notice %>
+  </div><br/>
+<% end %>
+
+<% if alert.present? && show_flash?(:alert, alert) %>
+  <div class="alert alert-callout alert-warning  alert-dismissable" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <%= alert %>
+  </div>
+<% end %>
+
+<div class="row">
+<div class="col-sm-6">
+<br/>
+<span class="text-lg text-bold text-primary">My Website Customer Center</span>
+<br/><br/>
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "form floating-label"}) do |f| %>
+
+  <div class="form-group">
+    <%= f.text_field :login, class: 'form-control' %>
+    <%= f.label :login %>
+  </div>
+
+  <div class="form-group">
+    <%= f.password_field :password, class:"form-control", autocomplete: "off" %>
+    <%= f.label :password %>
+    <p class="help-block">
+      <%= link_to "Forgotten?", new_password_path(resource_name) %>
+    </p>
+  </div>
+
+  <br/>
+  <div class="row">
+
+    <div class="col-xs-6 text-left">
+
+    <% if devise_mapping.rememberable? -%>
+      <div class="checkbox checkbox-inline checkbox-styled">
+        <label>
+          <!-- note use of hard-coded form field: incompatibility with form helper + theme -->
+          <input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me" />
+          <span>Remember me</span>
+        </label>
+      </div>
+    <% end -%>
+
+    </div>
+    <div class="col-xs-6 text-right">
+      <button class="btn btn-primary btn-raised" type="submit">Login</button>
+    </div>
+  </div>
+  <% end %>
+</form>
+</div>
+<div class="col-sm-5 col-sm-offset-1 text-center">
+<br>
+<br>
+  <h3 class="text-light">
+    No account yet?
+  </h3>
+  <a class="btn btn-block btn-raised btn-primary" href="http://www.mywebsite.com/create-account/">Sign up here</a>
+
+  <br>
+  <br>
+    <h3 class="text-light">
+      or
+    </h3>
+    <p>
+      <%= link_to "<i class='fa fa-facebook pull-left'></i>Login with Facebook".html_safe,
+        '/auth/facebook',
+        class: 'btn btn-block btn-raised btn-info' %>
+    </p>
+    <p>
+      <%= link_to "<i class='fa fa-google pull-left'></i>Login with Google".html_safe,
+        '/auth/google_oauth2',
+        class: 'btn btn-block btn-raised btn-info' %>
+    </p>
+  </div>
+</div>

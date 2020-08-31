@@ -1,0 +1,20 @@
+
+<% breadcrumbs.tap do |links| %>
+  <% if links.any? %>
+
+    <div class="section-header">
+      <ol class="breadcrumb">
+        <% links.each do |link| %>
+          <%= tag("li", open: true, class: (link.current? ? "active" : nil)) %>
+            <% if link.url %>
+              <%= link_to link.text, link.url %>
+            <% else %>
+              <%= link.text %>
+            <% end %>
+          </li>
+        <% end %>
+      </ol>
+    </div>
+  <% end %>
+
+<% end %>

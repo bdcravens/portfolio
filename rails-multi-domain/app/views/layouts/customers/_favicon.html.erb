@@ -1,0 +1,12 @@
+<%= favicon_link_tag 'favicon.ico', sizes: '16x16 32x32 48x48 64x64 128x128' %>
+<!-- iOS will NOT load Apple touch icons if referenced in erb--HTML ONLY -->
+<link rel="apple-touch-icon-precomposed" sizes: "57x57 60x60 72x72 76x76 114x114 120x120 152x152" href="apple-touch-icon-precomposed.png">
+<!-- Holds the name that will be displayed on the mobile homescreen,
+otherwise the page title will be used -->
+<meta name="apple-mobile-web-app-title" content="My Website"/>
+<!-- Hides the browser UI so that you can maximize the screen space
+available to your app -->
+<!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
+<!-- Displays the status bar over the top of the web content, with a
+translucent background -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">

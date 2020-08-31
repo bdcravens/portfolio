@@ -1,0 +1,474 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ */
+
+body {
+  font-family:                "Avenir Next", Helvetica, Arial, sans-serif;
+  padding-top:                70px;
+  background-color:           rgba(240, 240, 240, 0.1);
+}
+
+nav.navbar.navbar-inverse {
+  margin-bottom:              0px;
+  background-color:           rgba(34, 34, 34, 0.8);
+  border-color:               rgba(8, 8, 8, 0.8);
+}
+
+table, tr, th, td {
+  border:                     0px transparent !important;
+}
+
+#navbar li a {
+  color:                      #9d9d9d;
+  background-color:           transparent !important;
+}
+
+#navbar li a:hover,
+#navbar li a:focus,
+#navbar li a:active {
+  color:                      #fff;
+  background-color:           rgba(34, 34, 34, 0.5) !important;
+}
+
+.navbar-right {
+  float: right!important;
+  margin-left: 15px;
+}
+
+.panel {
+  -webkit-box-shadow:         0 3px 10px rgba(0,0,0,0.3);
+  box-shadow:                 0 3px 10px rgba(0,0,0,0.3);
+}
+
+a:hover, a:focus,
+a:active, a:visited {
+  text-decoration:            none;
+  outline:                    none;
+  cursor:                     pointer;
+}
+
+.center-block {
+  display:                    block;
+  margin-left:                auto;
+  margin-right:               auto;
+}
+
+i.badge-left {
+  margin-left:                15px;
+  float:                      left;
+}
+
+i.badge-right {
+  margin-right:               15px;
+  float:                      right;
+}
+
+i.badge-center {
+  margin:                     0 15 0 15;
+}
+
+dl {
+  font-size:                  16px;
+}
+
+dd {
+  padding-bottom:             10px;
+}
+
+.bt-lg,
+button {
+  padding:                    10px 16px;
+  font-size:                  150%;
+  border-radius:              8px;
+}
+
+button:hover,   .btn:hover,
+button:visited, .btn:visited,
+button:focus,   .btn:focus,
+button:active,  .btn:active {
+  text-decoration:            none;
+  outline:                    0;
+  cursor:                     pointer;
+}
+
+.hidden-xs {
+  margin-left:                15px;
+}
+
+/* Scope:  Call Screen (show.html.erb) */
+
+  .call-screen-header {
+    width:                    100%;
+    margin:                   30px -15px;
+    display:                  inline-flex;
+    flex-wrap:                nowrap;
+    border-bottom:            1px solid #ddd;
+    white-space:              nowrap;
+  }
+
+
+  .btn-call-screen {
+    font-size:                150%;
+    float:                    right;
+    font-variant:             all-small-caps;
+    margin:                   10px;
+  }
+
+  .btn-call-screen i {
+    font-size:                140%;
+    margin-right:             5px;
+    float:                    left;
+  }
+
+  .client-header {
+    text-align:               justify;
+    overflow:                 hidden;
+    white-space:              nowrap;
+  }
+
+  .client-name {
+    font-size:                125%;
+    text-align:               left;
+    letter-spacing:           8px;
+  }
+
+  .divider {
+    text-align:               center;
+    color:                    #999;
+    padding:                  inherit;
+    font-weight:              200;
+  }
+
+  .disputes-remaining {
+    text-align:               right;
+    color:                    #999;
+    font-size:                80%;
+    font-weight:              300;
+    letter-spacing:           8px;
+    font-variant:             small-caps;
+    text-indent:              1%;
+    padding:                  10px;
+    overflow:                 hidden;
+    white-space:              nowrap;
+  }
+
+  .instructions {
+    text-indent:              3%;
+    font-weight:              lighter;
+  }
+
+  .help-link {
+    float:                    right;
+    padding:                  10px;
+    font-size:                70%;
+    color:                    #2196f3;
+    font-variant:             all-small-caps;
+    letter-spacing:           12px;
+    margin-right:             2%;
+  }
+
+  .help-link:hover,
+  .help-link:active {
+    color:                    #186eb3;
+  }
+
+  .panel-default {
+    width:                    100%;
+    margin:                   30px auto;
+    border:                   1px solid #888 !important;
+    border-radius:            15px;
+    background-color:         rgba(255, 255, 255, 1);
+  }
+
+  .panel-group {
+    /*foo:                      bar;*/
+  }
+
+  .panel-default>.panel-heading {
+    border-color:             #888 !important;
+    border-top-left-radius:   inherit;
+    border-top-right-radius:  inherit;
+    padding:                  15px 25px;
+    background-color:         rgba(136, 136, 136, 0.2);
+  }
+
+  /*.panel-group>.panel-heading {
+    border:                   0px;
+    border-radius:            15px;
+  }*/
+
+  .panel-group .panel-title .btn-trkg-group {
+    font-weight:              500;
+    color:                    rgba(51, 122, 183, 0.7);
+    background-color:         rgba(136, 136, 136, 0.2);
+    /*padding:                  0px;*/
+    border:                   0px;
+    border-radius:            15px;
+  }
+
+  .panel-group .panel-title .btn-trkg-group:hover,
+  .panel-group .panel-title .btn-trkg-group:active {
+    color:                    #fff;
+    background-color:         rgba(136, 136, 136, 0.7);
+  }
+
+  .panel-title {
+    color:                    #666;
+    font-size:                20px;
+    text-align:               left;
+    letter-spacing:           10px;
+    font-variant:             all-small-caps;
+  }
+
+  .panel-body {
+    background-color:         rgba(255, 255, 255, 0.8);
+  }
+
+  .collapse {
+    /*foo:                      bar;*/
+  }
+
+  .btn-collapse {
+    text-align:               left;
+    color:                    rgba(0, 0, 0, 0.4) !important;
+    border:                   none;
+    background:               transparent;
+    padding:                  0px;
+
+  }
+
+  .btn-collapse>i {
+    float:                    right;
+    font-size:                30px;
+    font-weight:              500;
+    margin:                   -5px;
+  }
+
+  .btn-collapse:hover,
+  .btn-collapse:active {
+    color:                    rgba(0, 0, 0, 0.7) !important;
+  }
+
+  .btn-trkg-group {
+    width:                    100%;
+    margin:                   0px 0px 5px 0px;
+  }
+
+  .btn-trkg-collapse,
+  .btn-trkg-collapse:focus {
+    width:                    80%;
+    color:                    inherit;
+    text-align:               left;
+    letter-spacing:           10px;
+    /*font-size:                100%;*/
+    font-weight:              500;
+    padding:                  3px;
+    border-left:              25px solid #337ab7;
+    background-color:         transparent;
+  }
+
+  .btn-trkg-collapse:hover,
+  .btn-trkg-collapse:active {
+    color:                    #fff;
+    border-left:              25px solid #286090;
+  }
+
+  .trkg-number {
+    margin-left:              10px;
+    font-size:                180%;
+  }
+
+  .text-trkg-btn-question {
+    width:                    25%;
+    float:                    right;
+    font-size:                140%;
+    font-variant:             small-caps;
+    font-weight:              500;
+    text-align:               right;
+    letter-spacing:           normal;
+    padding:                  5px 15px 5px 5px;
+  }
+
+  .btn-group-thumbs {
+    float:                    right !important;
+    width:                    20%;
+  }
+
+  .btn-dispute-status {
+    font-size:                70%;
+    padding:                  3% !important;
+    margin-left:              0px !important;
+    border-left-width:        0px;
+    width:                    50%;
+  }
+
+
+/* Scope:  Call Screen Help Panel (_calls_help_modal.html.erb) */
+
+  .modal-dialog {
+    width:                    40% !important;
+  }
+
+  .modal-content {
+    padding:                  20px;
+  }
+
+  .modal-title {
+    font-size:                200%;
+    font-weight:              400;
+    font-variant:             small-caps;
+    letter-spacing:           8px;
+  }
+
+
+/* Scope:  Tracking Details (dispute details) Panels (_trkg_details_collapse.html.erb) */
+
+  .nav-tabs>li>a {
+    font-size:                175%;
+    letter-spacing:           10px;
+    font-weight:              400;
+    font-variant:             small-caps;
+    color:                    rgba(180, 180, 180, 0.5);
+  }
+
+  #trkgDetailsTabs.nav-tabs>li>a:hover {
+    color:                    rgba(180, 180, 180, 1);
+    background-color:         inherit;
+  }
+
+  #trkgDetailsTabs.nav-tabs>li>a:focus,
+  #trkgDetailsTabs.nav-tabs>li.active>a {
+    color:                    rgba(51, 122, 183, 0.8) !important;
+    background-color:         inherit;
+  }
+
+  .travel-history,
+  .ship-facts {
+    height:                   initial;
+  }
+
+  /*.travel-history tbody {
+    border-radius:            0;
+    overflow-y:               scroll;
+    overflow-x:               hidden;
+    height:                   325;
+  }*/
+
+  .table>tbody>tr>td {
+    border:                   0px;
+    vertical-align:           middle !important;
+  }
+
+  .table-hover>tbody>tr:hover,
+  .table-hover>tbody>th:hover {
+    background-color:         rgba(51, 122, 183, 0.1) !important;
+  }
+
+  div.trkg-details {
+    color:                    #666;
+    margin:                   0px auto 15px auto;
+    width:                    100%;
+  }
+
+  thead>tr>th {
+    border-bottom:            2px solid rgba(51, 122, 183, 0.5) !important;
+  }
+
+  div.travel-history>table {
+    font-size:                120%;
+  }
+
+  .header-date-time {
+    /*width:                    25%;*/
+    color:                    rgba(51, 122, 183, 0.8);
+    font-size:                120%;
+    font-weight:              300;
+    font-variant:             all-small-caps;
+    letter-spacing:           2px;
+    word-spacing:             8px;
+    padding-right:            30px !important;
+    text-align:               right;
+  }
+
+  .header-status-comment {
+    width:                    40%;
+    color:                    rgba(51, 122, 183, 0.8);
+    font-size:                120%;
+    font-weight:              300;
+    font-variant:             all-small-caps;
+    letter-spacing:           2px;
+    word-spacing:             8px;
+  }
+
+  .header-location {
+    color:                    rgba(51, 122, 183, 0.8);
+    font-size:                120%;
+    font-weight:              300;
+    font-variant:             all-small-caps;
+    letter-spacing:           2px;
+    word-spacing:             8px;
+  }
+
+  .date {
+    line-height:              1.8 !important;
+    font-weight:              600;
+    color:                    rgba(51, 122, 183, 0.8);
+    background-color:         rgba(51, 122, 183, 0.2) !important;
+    text-indent:              6%;
+    letter-spacing:           3px;
+    border-bottom:            1px solid rgba(51, 122, 183, 0.3) !important;
+  }
+
+  .time {
+    text-align:               right;
+    font-size:                90%;
+    font-weight:              300;
+    opacity:                  0.7;
+    padding-right:            3% !important;
+  }
+
+  .status {
+    font-weight:              500;
+    color:                    #666;
+  }
+
+  .comment {
+    font-size:                90%;
+    font-weight:              400;
+    text-indent:              15px;
+    padding-left:             10px;
+    opacity:                  0.5;
+  }
+
+  .location {
+    font-variant:             all-small-caps;
+    opacity:                  0.7;
+  }
+
+  .ship-facts th {
+    width:                    25%;
+    color:                    rgba(51, 122, 183, 0.8);
+    font-size:                125% !important;
+    font-weight:              500 !important;
+    font-variant:             all-small-caps;
+    /*background-color:         rgba(51, 122, 183, 0.2);*/
+    border-left:              2px solid rgba(51, 122, 183, 0.2);
+    text-indent:              10px;
+  }
+
+  .ship-facts td {
+    width:                    25%;
+    color:                    #666;
+    /*font-size:                125% !important;*/
+    font-weight:              500 !important;
+    text-indent:              10px;
+  }

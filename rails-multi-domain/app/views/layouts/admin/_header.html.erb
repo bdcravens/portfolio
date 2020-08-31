@@ -1,0 +1,28 @@
+<style>
+
+/*.page-header-menu {
+  background: #749f6f !important;
+}*/
+
+</style>
+
+<!-- BEGIN HEADER -->
+<div class="page-header">
+  <!-- BEGIN HEADER TOP -->
+  <div class="page-header-top">
+    <div class="container-fluid">
+      <!-- BEGIN LOGO -->
+      <div class="page-logo">
+        <%= image_tag "logo-small.png", class:"logo-default", style: "margin: 15px" %>
+      </div>
+      <!-- END LOGO -->
+      <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+      <a href="javascript:;" class="menu-toggler"></a>
+      <!-- END RESPONSIVE MENU TOGGLER -->
+      <%= render "layouts/#{@theme}/top_navigation_menu" %>
+    </div>
+  </div>
+  <!-- END HEADER TOP -->
+  <%= render "layouts/#{@theme}/header_menu" %>
+</div>
+<!-- END HEADER -->

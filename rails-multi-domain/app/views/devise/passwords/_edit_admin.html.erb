@@ -1,0 +1,51 @@
+<div class="colorful-page-wrapper">
+  <div class="center-block">
+    <div class="login-block">
+      <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put ,:class => 'orb-form' , :id => 'login-form' }) do |f| %>
+        <header>
+          <div class="image-block"><img src="/assets/logo.png" alt="User" /></div>
+          Change your password</header>
+
+        <%= devise_error_messages! %>
+        <%= f.hidden_field :reset_password_token %>
+        <fieldset>
+          <section>
+            <div class="row">
+              <label class="label col col-4">New password</label>
+              <div class="col col-8">
+                <label class="input"> <i class="icon-append fa fa-user"></i>
+                  <%= f.password_field :password, :autofocus => true %>
+                </label>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="row">
+              <label class="label col col-4">Confirm new password</label>
+              <div class="col col-8">
+                <label class="input"> <i class="icon-append fa fa-user"></i>
+                   <%= f.password_field :password_confirmation %>
+                </label>
+              </div>
+            </div>
+          </section>
+
+        </fieldset>
+        <footer>
+        <%= f.submit "Change my password" ,:class => 'btn btn-default' %>
+        </footer>
+      <% end %>
+    </div>
+    <div class="using-social-header">Sign In Using Social Profiles</div>
+    <div class="social-buttons">
+      <ul class="social">
+        <li><a href="http://facebook.com/"><i class="entypo-facebook-circled"></i></a></li>
+        <li><a href="http://google.com/"><i class="entypo-gplus-circled"></i></a></li>
+        <li><a href="http://twitter.com/"><i class="entypo-twitter-circled"></i></a></li>
+      </ul>
+    </div>
+    <div class="copyrights"> ORB Power Admin Dashboard Template <br>
+      Created by DazeinCreative &copy; 2014 </div>
+  </div>
+</div>
